@@ -1,11 +1,18 @@
 ﻿#include <iostream>
-#include "UP-Practicum-5.h"
 
 using namespace std;
 
 const int Size = 1000;
 
 void PrintArray(int arr[], int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+	}
+}
+
+void PrintArray(char arr[], int size)
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -98,7 +105,7 @@ int main()
 	PrintArray(arr, size);*/
 
 	//Зад 5.
-	const int size = 5;
+	/*const int size = 5;
 	char arr[size];
 
 	int start = 0;
@@ -111,6 +118,87 @@ int main()
 		arr[i] = arr[i - 1] + i;
 	}
 
-	PrintArray(arr, size);
+	PrintArray(arr, size);*/
+
+	//Зад 6.
+	/*int n = 0;
+	int maxIncrementCount = 0;
+	int incrementCount = 1;
+	cin >> n;
+
+	int arr[Size];
+
+	FillArray(arr, n);
+
+	for (int i = 1; i < n; i++)
+	{
+		if (arr[i - 1] < arr[i])
+		{ incrementCount++; }
+		else 
+		{ 
+			if (incrementCount > maxIncrementCount)
+			{ 
+				maxIncrementCount = incrementCount; 
+			}
+
+			incrementCount = 1;
+		}
+	}
+
+	cout << maxIncrementCount;*/
+
+	//Homework
+	//Зад 7.
+	/*const int size = 10;
+	int arr[size];
+	int count = 0;
+	bool IsPrime = true;
+
+	FillArray(arr, size);
+
+	for (int i = 0; i < size; i++)
+	{
+		for (int n = 2; n < arr[i]; n++)
+		{
+			if (arr[i] % n == 0)
+			{
+				IsPrime = false;
+				break;
+			}
+		}
+
+		if (IsPrime)
+		{ count++; }
+	}
+
+	cout << count;*/
+
+	//Зад 8.
+	/*const int size = 5;
+	int firstArr[size];
+	int secondArr[size];
+
+	FillArray(firstArr, size);
+	FillArray(secondArr, size);
+
+	bool linearEquation = true;
+
+	for (int i = 0; i < size - 1; i++)
+	{
+		if (firstArr[i] / secondArr[i] != firstArr[i + 1] / secondArr[i + 1])
+		{
+			linearEquation = false;
+			break;
+		}
+	}
+
+	if (linearEquation)
+	{
+		cout << "True!";
+	}
+	else
+	{
+		cout << "No!";
+	}*/
 }
 
